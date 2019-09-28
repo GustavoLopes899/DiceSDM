@@ -15,7 +15,7 @@
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/numDadosSpinner" />
 
     <Button
         android:id="@+id/jogarDadoButton"
@@ -40,11 +40,42 @@
     <ImageView
         android:id="@+id/resultadoImageView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
+        android:contentDescription="@string/mostrar_dado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/resultadoTextView"
         app:srcCompat="@android:color/transparent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/selecione_o_numero_de_dados"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/numDadosSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/numero_dados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/resultado2ImageView"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:contentDescription="@string/mostrar_dado"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultadoImageView"
+        app:srcCompat="@android:color/transparent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
