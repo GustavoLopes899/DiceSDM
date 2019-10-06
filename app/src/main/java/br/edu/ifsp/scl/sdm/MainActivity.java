@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.sdm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // Componentes visuais
     private TextView resultadoTextView;
-    private Button jogarDadoButton;
     private ImageView resultadoImageView;
     private Spinner numDadosSpinner;
     private ImageView resultado2ImageView;
@@ -37,8 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultadoTextView = findViewById(R.id.resultadoTextView);
 
         // Recuperando referência para o jogarDadoButton do arquivo de layout
-        jogarDadoButton = findViewById(R.id.jogarDadoButton);
+        Button jogarDadoButton = findViewById(R.id.jogarDadoButton);
         jogarDadoButton.setOnClickListener(this);
+
+        Button voltarButton = findViewById(R.id.voltar);
+        voltarButton.setOnClickListener(this);
 
         // Recuperando referência para o resultadoImageView do arquivo de layout
         resultadoImageView = findViewById(R.id.resultadoImageView);
@@ -90,6 +93,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             resultadoTextView.setText(resultadoText.substring(0,
                     resultadoText.lastIndexOf(',')));
+        } else if (view.getId() == R.id.voltar) {
+            Intent intent = new Intent(getApplicationContext(), TelaInicialActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 

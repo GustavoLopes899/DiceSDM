@@ -6,6 +6,11 @@
     <string name="face_sorteada">Face sorteada:</string>
     <string name="selecione_o_numero_de_dados">Selecione o número de dados</string>
     <string name="mostrar_dado">Mostrar dado</string>
+    <string name="iniciar_o_app">Iniciar o App</string>
+    <string name="bingo">Bingo</string>
+    <string name="sorteio_de_dados">Sorteio de dados</string>
+    <string name="voltar">Voltar</string>
+    <string name="numero_de_faces">Entre com o número de faces</string>
     <string-array name="numero_dados">
         <item>1</item>
         <item>2</item>
